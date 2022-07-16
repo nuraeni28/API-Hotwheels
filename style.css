@@ -46,6 +46,10 @@ pre{
     border-radius: 20px;
 }
 
+.text-danger{
+    font-family: 'Space Mono', monospace !important;
+}
+
 
 h1, h2, h3, p{
     color: black;
