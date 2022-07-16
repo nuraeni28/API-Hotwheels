@@ -38,8 +38,7 @@
           <ul class="navbar-nav me-auto">
           </ul>
           <form role="search">
-            <a type="button" href="index.php" class="btn btn-dark">Login</a>
-            <a type="button" href="register.php" class="btn btn-dark">Register</a>
+            <button type="button" href="index.php" class="btn btn-dark">Logout</button>
           </form>
         </div>
       </div>
@@ -49,8 +48,7 @@
       <div class="row">
         <div class="col-lg-12 mt-5">
           <h2 class="display-1 mb-5">Hotwheels API Documentation</h2>
-          <p class="text-danger">Oopps! you need to login to generate the key</p>
-          <button class="btn btn-disabled btn-sm" disabled>Generate API Key</button>
+          <button class="btn btn-dark btn-sm">Generate API Key</button>
           <h3 class="text-primary mt-5">
             <small><em>Method</em></small
             >/GET
