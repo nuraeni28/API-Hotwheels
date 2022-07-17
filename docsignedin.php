@@ -23,7 +23,8 @@
 			$_SESSION['pwd']=$pwd;
 			echo "login berhasil";
 		}else{
-			echo "login salah";
+            echo ("<script>alert('Login Salah!')</script>");
+            echo ("<script>window.location = 'index.php';</script>");;
 		}
 	}
 
