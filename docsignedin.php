@@ -74,11 +74,11 @@
       <div class="col-lg-12 mt-5">
         <h2 class="display-1 mb-5">Hotwheels API Documentation</h2>
         <form action="" method="post">
-        <button class="btn btn-dark btn-sm" name="submit" type='submit'>Generate API Key</button>
+        <button class="btn btn-dark btn-sm" name="submit1" type='submit'>Generate API Key</button>
         <input type="hidden" name="uname" value="<?php echo $_SESSION['uname']; ?>">
 		<input type="hidden" name="pwd" value="<?php echo $_SESSION['pwd']; ?>">
         <?php
-        if(isset($_POST['submit'])){
+        if(isset($_POST['submit1'])){
         $uname = $_POST['uname'];
         $pwd = $_POST['pwd'];
     
@@ -94,15 +94,13 @@
         $conn = new mysqli($servername, $username, $password, $dbname);
     
         //update api key
+        
         $sql = "UPDATE user SET key_token='$token' WHERE username='$uname' AND password='$pwd'";
         $result = $conn->query($sql);
-        if ($result > 0) {
-
-            echo "Key/Token API Anda: ".$token;
-		}else{
-			echo "";
-		}
-          
+        echo "Key/Token API Anda: ".$token;
+        }
+        else{
+            echo '';
         }
     
     ?>     
