@@ -72,7 +72,7 @@
     <div class="row">
       <div class="col-lg-12 mt-5">
         <h2 class="display-1 mb-5">Hotwheels API Documentation</h2>
-        <form action="userGenerateKey.php" method="post">
+        <form action="" method="post">
         <button class="btn btn-dark btn-sm" name="submit">Generate API Key</button>
         <input type="hidden" name="uname" value="<?php echo $_SESSION['uname']; ?>">
 		<input type="hidden" name="pwd" value="<?php echo $_SESSION['pwd']; ?>">
@@ -95,7 +95,7 @@
         $sql = "UPDATE user SET key_token='$token' WHERE username='$uname' AND password='$pwd'";
         $result = $conn->query($sql);
         
-        echo "Key/Token API Anda: ".$token;
+           echo "Key/Token API Anda: ".$token;
     
     ?>     
 </form>

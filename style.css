@@ -18,6 +18,11 @@
     background: #e76f51;
   }
 
+
+body{
+    padding-bottom: 40px;
+}
+
 .navbar-brand{
     font-family: 'Space Mono', monospace;
     font-weight: 700;
@@ -46,6 +51,10 @@ pre{
     border-radius: 20px;
 }
 
+.text-danger{
+    font-family: 'Space Mono', monospace !important;
+}
+
 
 h1, h2, h3, p{
     color: black;
@@ -68,6 +77,12 @@ kbd{
 
 .btn-dark{
     background-color: #506ff6 !important;
+    font-family: 'Space Mono', monospace;
+}
+
+.btn-disabled{
+    background-color: #14213d !important;
+    color: white !important;
     font-family: 'Space Mono', monospace;
 }
 
