@@ -1,32 +1,33 @@
 <?php
-	session_start();
+session_start();
 
-	if(isset($_POST['submit'])){
-		$uname = $_POST['uname'];
-		$pwd = md5($_POST['pwd']);
+if (isset($_POST['submit'])) {
+  $uname = $_POST['uname'];
+  $pwd = md5($_POST['pwd']);
+  $hello = " ";
 
-		//koneksi db
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "hotwheels";
+  //koneksi db
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "hotwheels";
 
-		//create connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
+  //create connection
+  $conn = new mysqli($servername, $username, $password, $dbname);
 
-		//cek user
-		$sql = "SELECT * FROM user WHERE username='$uname' AND password='$pwd'";
-		$result = $conn->query($sql);
+  //cek user
+  $sql = "SELECT * FROM user WHERE username='$uname' AND password='$pwd'";
+  $result = $conn->query($sql);
 
-		if ($result->num_rows > 0) {
-			$_SESSION['uname']=$uname;
-			$_SESSION['pwd']=$pwd;
-			echo "login berhasil";
-		}else{
-            echo ("<script>alert('Login Salah!')</script>");
-            echo ("<script>window.location = 'index.php';</script>");;
-		}
-	}
+  if ($result->num_rows > 0) {
+    $_SESSION['uname'] = $uname;
+    $_SESSION['pwd'] = $pwd;
+    $hello = "Hello, $uname";
+  } else {
+    echo ("<script>alert('Login Salah!')</script>");
+    echo ("<script>window.location = 'index.php';</script>");
+  }
+}
 
 ?>
 <!DOCTYPE html>
@@ -55,6 +56,7 @@
   <nav class="navbar navbar-expand navbar-dark bg-light" aria-label="Second navbar example">
     <div class="container-fluid">
       <a class="navbar-brand text-dark" href="#">Doc</a>
+      <a style="font-family: 'Space Mono', monospace;"><?php echo @$hello; ?></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -74,37 +76,38 @@
       <div class="col-lg-12 mt-5">
         <h2 class="display-1 mb-5">Hotwheels API Documentation</h2>
         <form action="" method="post">
-        <button class="btn btn-dark btn-sm" name="submit1" type='submit'>Generate API Key</button>
-        <input type="hidden" name="uname" value="<?php echo $_SESSION['uname']; ?>">
-		<input type="hidden" name="pwd" value="<?php echo $_SESSION['pwd']; ?>">
-        <?php
-        if(isset($_POST['submit1'])){
-        $uname = $_POST['uname'];
-        $pwd = $_POST['pwd'];
-    
-        $token = md5($uname.$pwd);
-    
-        //koneksi db
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "hotwheels";
-    
-        //create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-    
-        //update api key
-        
-        $sql = "UPDATE user SET key_token='$token' WHERE username='$uname' AND password='$pwd'";
-        $result = $conn->query($sql);
-        echo "Key/Token API Anda: ".$token;
-        }
-        else{
+          <button class="btn btn-dark btn-sm" name="submit1" type='submit'>Generate API Key</button>
+          <input type="hidden" name="uname" value="<?php echo $_SESSION['uname']; ?>">
+          <input type="hidden" name="pwd" value="<?php echo $_SESSION['pwd']; ?>">
+          <?php
+          if (isset($_POST['submit1'])) {
+            $uname = $_POST['uname'];
+            $pwd = $_POST['pwd'];
+
+            $token = md5($uname . $pwd);
+            $generated = "";
+
+            //koneksi db
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "hotwheels";
+
+            //create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            //update api key
+
+            $sql = "UPDATE user SET key_token='$token' WHERE username='$uname' AND password='$pwd'";
+            $result = $conn->query($sql);
+            $generated = "Your API Key: " . $token;
+          } else {
             echo '';
-        }
-    
-    ?>     
-</form>
+          }
+
+          ?>
+        </form>
+        <p class="mt-3" style="font-family: 'Space Mono', monospace;"><?php echo @$generated; ?></p>
         <h3 class="text-primary mt-5">
           <small><em>Method</em></small>/GET
         </h3>

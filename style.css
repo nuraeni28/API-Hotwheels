@@ -51,6 +51,10 @@ pre{
     border-radius: 20px;
 }
 
+.uname{
+    font-family: 'Space Mono', monospace;
+}
+
 .text-danger{
     font-family: 'Space Mono', monospace !important;
 }
