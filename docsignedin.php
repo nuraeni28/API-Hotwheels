@@ -1,3 +1,33 @@
+<?php
+	session_start();
+
+	if(isset($_POST['submit'])){
+		$uname = $_POST['uname'];
+		$pwd = md5($_POST['pwd']);
+
+		//koneksi db
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "hotwheels";
+
+		//create connection
+		$conn = new mysqli($servername, $username, $password, $dbname);
+
+		//cek user
+		$sql = "SELECT * FROM user WHERE username='$uname' AND password='$pwd'";
+		$result = $conn->query($sql);
+
+		if ($result->num_rows > 0) {
+			$_SESSION['uname']=$uname;
+			$_SESSION['pwd']=$pwd;
+			echo "login berhasil";
+		}else{
+			echo "login salah";
+		}
+	}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,8 +62,7 @@
         <ul class="navbar-nav me-auto">
         </ul>
         <form role="search">
-          <a type="button" href="index.php" class="btn btn-dark">Login</a>
-          <a type="button" href="register.php" class="btn btn-dark">Register</a>
+          <button type="button" href="index.php" class="btn btn-dark">Logout</button>
         </form>
       </div>
     </div>
@@ -43,8 +72,33 @@
     <div class="row">
       <div class="col-lg-12 mt-5">
         <h2 class="display-1 mb-5">Hotwheels API Documentation</h2>
-        <p class="text-danger">Oopps! you need to login to generate the key</p>
-        <button class="btn btn-disabled btn-sm" disabled>Generate API Key</button>
+        <form action="userGenerateKey.php" method="post">
+        <button class="btn btn-dark btn-sm" name="submit">Generate API Key</button>
+        <input type="hidden" name="uname" value="<?php echo $_SESSION['uname']; ?>">
+		<input type="hidden" name="pwd" value="<?php echo $_SESSION['pwd']; ?>">
+        <?php
+        $uname = $_POST['uname'];
+        $pwd = $_POST['pwd'];
+    
+        $token = md5($uname.$pwd);
+    
+        //koneksi db
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "hotwheels";
+    
+        //create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+    
+        //cek user
+        $sql = "UPDATE user SET key_token='$token' WHERE username='$uname' AND password='$pwd'";
+        $result = $conn->query($sql);
+        
+        echo "Key/Token API Anda: ".$token;
+    
+    ?>     
+</form>
         <h3 class="text-primary mt-5">
           <small><em>Method</em></small>/GET
         </h3>
@@ -144,6 +198,7 @@
             "description": "API Key/Token Not Valid"
         }
     }
+
             </code>
           </pre>
         </div>

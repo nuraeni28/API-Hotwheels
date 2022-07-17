@@ -30,7 +30,7 @@
 ?>
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<title>Generate API Key/Token</title>
@@ -45,4 +45,4 @@
 	</form>
 
 </body>
-</html>
+</html> -->

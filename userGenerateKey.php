@@ -18,6 +18,6 @@
 	$sql = "UPDATE user SET key_token='$token' WHERE username='$uname' AND password='$pwd'";
 	$result = $conn->query($sql);
 	
-	echo "Key/Token API Anda: ".$token;
+
 
 ?>
