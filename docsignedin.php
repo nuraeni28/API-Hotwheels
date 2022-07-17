@@ -62,7 +62,7 @@
         <ul class="navbar-nav me-auto">
         </ul>
         <form role="search">
-          <button type="button" href="index.php" class="btn btn-dark">Logout</button>
+          <a type="button" href="logout.php" class="btn btn-dark">Logout</a>
         </form>
       </div>
     </div>

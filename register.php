@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
         $result = $conn->query($sql);
 
         echo ("<script>alert('Register Berhasil!')</script>");
-        echo ("<script>window.location = 'userLogin.php';</script>");
+        echo ("<script>window.location = 'doc.php';</script>");
       } else {
         $unameError = "*Username already taken";
       }
