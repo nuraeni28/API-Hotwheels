@@ -56,7 +56,6 @@ if (isset($_POST['submit'])) {
   <nav class="navbar navbar-expand navbar-dark bg-light" aria-label="Second navbar example">
     <div class="container-fluid">
       <a class="navbar-brand text-dark" href="#">Doc</a>
-      <a style="font-family: 'Space Mono', monospace;"><?php echo @$hello; ?></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -65,6 +64,7 @@ if (isset($_POST['submit'])) {
         <ul class="navbar-nav me-auto">
         </ul>
         <form role="search">
+          <a style="font-family: 'Space Mono', monospace; margin-right:24px"><?php echo @$hello; ?></a>
           <a type="button" href="logout.php" class="btn btn-dark">Logout</a>
         </form>
       </div>
@@ -211,6 +211,24 @@ if (isset($_POST['submit'])) {
         "status": {
             "code": 400,
             "description": "API Key/Token Not Valid"
+        }
+    }
+
+            </code>
+          </pre>
+        </div>
+        <p class="text-danger mt-3">
+          <strong>400</strong> <strong><em>Failed</em></strong>
+        </p>
+        <p style="font-size:14px">If the series currently not available</p>
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" >
+                 <!-- paste disini hasil response failed (invalid key) -->
+    {
+        "status": {
+            "code": 400,
+            "description": "None"
         }
     }
 

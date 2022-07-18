@@ -153,6 +153,24 @@
             </code>
           </pre>
         </div>
+        <p class="text-danger mt-3">
+          <strong>400</strong> <strong><em>Failed</em></strong>
+        </p>
+        <p style="font-size:14px">If the series currently not available</p>
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" >
+                 <!-- paste disini hasil response failed (invalid key) -->
+    {
+        "status": {
+            "code": 400,
+            "description": "None"
+        }
+    }
+
+            </code>
+          </pre>
+        </div>
       </div>
     </div>
   </div>
