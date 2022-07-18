@@ -167,7 +167,7 @@ if (isset($_POST['submit'])) {
         <p class="mt-3">Get all data of hotwheels <mark>series</mark> cars</p>
         <h4 class="text-secondary"><em>Request</em></h4>
         <p class="mt-3">
-          URL : <mark class="url">GET : http://localhost/apiUAS/getAllData.php</mark>
+          URL : <mark class="url">GET : http://localhost/apiUAS/getSeries.php?series=</mark>
         </p>
         <h4 class="text-tertiarry"><em>Response</em></h4>
         <p class="text-success">
@@ -177,19 +177,25 @@ if (isset($_POST['submit'])) {
           <pre>
             <code id="code" >
                 <!-- paste disini hasil response sukses -->
-      {
-        "status": {
-            "code": 200,
-            "description": "Request Valid"
+                {
+    "status": {
+        "code": 200,
+        "description": "Request Valid"
+    },
+    "results": [
+        {
+            "id": "3",
+            "model_name": "Twinnin' 'n Winnin'",
+            "series_name": "Baja Blazers",
+            "series_number": "1/10"
         },
-        "results": [
-            {
-                "id": "1",
-                "model_name": "1970 Pontiac Firebird",
-                "series_name": "HW Dream Garage - New for 2022",
-                "series_number": "1/5"
-            },
-    }
+        {
+            "id": "4",
+            "model_name": "Twinnin' 'n Winnin' (2nd Color)",
+            "series_name": "Baja Blazers",
+            "series_number": "1/10"
+        },
+      }
     
             </code>
           </pre>
