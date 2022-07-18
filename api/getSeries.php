@@ -2,6 +2,7 @@
     //header hasil berbentuk json
     header("Content-Type:application/json");
 
+    include '../connection.php';
     //tangkap key
     $header = apache_request_headers();
 
@@ -12,14 +13,6 @@
 
     //variabel hasil
     $result = array();
-    //koneksi database
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "hotwheels";
-        // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
     //cek user
 	$sql = "SELECT * FROM user WHERE key_token='$key'";
 	$user = $conn->query($sql);

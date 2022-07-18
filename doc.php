@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Doc</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <!-- <link
       rel="stylesheet"
       href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css"
     /> -->
   <script src="main.js" defer></script>
-  <link rel="stylesheet" href="dracula.css" />
+  <link rel="stylesheet" href="assets/dracula.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
 
@@ -32,8 +32,8 @@
         <ul class="navbar-nav me-auto">
         </ul>
         <form role="search">
-          <a type="button" href="index.php" class="btn btn-dark">Login</a>
-          <a type="button" href="register.php" class="btn btn-dark">Register</a>
+          <a type="button" href="auth/login.php" class="btn btn-dark">Login</a>
+          <a type="button" href="auth/register.php" class="btn btn-dark">Register</a>
         </form>
       </div>
     </div>

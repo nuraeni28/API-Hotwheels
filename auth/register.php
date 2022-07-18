@@ -1,5 +1,6 @@
 <?php
 session_start();
+include '../connection.php';
 
 if (isset($_POST['submit'])) {
   $uname = $_POST['uname'];
@@ -9,18 +10,6 @@ if (isset($_POST['submit'])) {
   $unameError = " ";
   $pwdError = " ";
 
-  //koneksi db
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "hotwheels";
-
-  //create connection
-  $conn = new mysqli($servername, $username, $password, $dbname);
-
-
-  // if (!empty($uname) && !empty($password)) {
-  //     if( cek_nama($uname,$conn) == 0 ){
 
 
   if (!empty($uname) && !empty($pwd)) {
@@ -33,7 +22,7 @@ if (isset($_POST['submit'])) {
         $result = $conn->query($sql);
 
         echo ("<script>alert('Register Berhasil!')</script>");
-        echo ("<script>window.location = 'index.php';</script>");
+        echo ("<script>window.location = 'login.php';</script>");
       } else {
         $unameError = "*Username already taken";
       }
@@ -94,7 +83,7 @@ if (isset($_POST['submit'])) {
           <span class="text-danger text-center"><?php echo @$emptymsg; ?></span>
           </div>
           <div class="mt-2">
-            <a href="index.php">I already have an account</a>
+            <a href="login.php">I already have an account</a>
           </div>
   </form>
   </div>
