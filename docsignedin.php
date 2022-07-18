@@ -107,7 +107,7 @@ if (isset($_POST['submit'])) {
         <p class="mt-3">Get all data of <mark>hotwheels</mark> cars</p>
         <h4 class="text-secondary"><em>Request</em></h4>
         <p class="mt-3">
-          URL : <mark class="url">GET : http://localhost/apiUAS/getAllData.php</mark>
+          URL : <mark class="url">GET : http://localhost/apiUAS/api/getAllData.php</mark>
         </p>
         <h4 class="text-tertiarry"><em>Response</em></h4>
         <p class="text-success">
@@ -160,7 +160,7 @@ if (isset($_POST['submit'])) {
         <p class="mt-3">Get all data of hotwheels <mark>series</mark> cars</p>
         <h4 class="text-secondary"><em>Request</em></h4>
         <p class="mt-3">
-          URL : <mark class="url">GET : http://localhost/apiUAS/getSeries.php?series=</mark>
+          URL : <mark class="url">GET : http://localhost/apiUAS/api/getSeries.php?series=</mark>
         </p>
         <h4 class="text-tertiarry"><em>Response</em></h4>
         <p class="text-success">
@@ -206,6 +206,77 @@ if (isset($_POST['submit'])) {
             "description": "API Key/Token Not Valid"
         }
     }
+
+            </code>
+          </pre>
+        </div>
+        <hr class="mt-5">
+
+        <h3 class="text-primary mt-5">
+          <small><em>Method</em></small>/GET
+        </h3>
+        <p class="mt-3">Get data of hotwheels by <mark>id</mark></p>
+        <h4 class="text-secondary"><em>Request</em></h4>
+        <p class="mt-3">
+          URL : <mark class="url">GET : http://localhost/apiUAS/api/getOneData.php?id=</mark>
+        </p>
+        <h4 class="text-tertiarry"><em>Response</em></h4>
+        <p class="text-success">
+          <strong>200</strong> <strong><em>Success</em></strong>
+        </p>
+        <div class="code-wrapper">
+          <pre class="code-wrapper">
+            <code id="code" >
+                <!-- paste disini hasil response sukses -->
+                    {
+                          "status": {
+                              "code": 200,
+                              "description": "Request Valid"
+                          },
+                          "results": [
+                              {
+                                  "id": "10",
+                                  "model_name": "'20 Jeep Gladiator (3rd Color)",
+                                  "series_name": "Baja Blazers",
+                                  "series_number": "4/10"
+                              }
+                          ]
+                      }
+    
+            </code>
+          </pre>
+        </div>
+        <p class="text-danger mt-3">
+          <strong>400</strong> <strong><em>Failed</em></strong>
+        </p>
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" >
+                 <!-- paste disini hasil response failed (invalid key) -->
+        {
+        "status": {
+            "code": 400,
+            "description": "API Key/Token Not Valid"
+        }
+       }
+
+            </code>
+          </pre>
+        </div>
+        <p class="text-danger mt-3">
+          <strong>400</strong> <strong><em>Failed</em></strong>
+        </p>
+        <p style="font-size:14px">If the ID currently not available</p>
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" >
+                 <!-- paste disini hasil response failed (invalid key) -->
+        {
+          "status": {
+             "code": 400,
+              "description": "ID Not Valid"
+            }
+          }
 
             </code>
           </pre>
