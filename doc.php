@@ -57,7 +57,7 @@
         <p class="mt-3 paragraph-animated">Get all data of <mark>hotwheels</mark> cars</p>
         <h4 class="text-secondary"><em>Request</em></h4>
         <p class="mt-3">
-          URL : <mark class="url">GET : http://localhost/apiUAS/getAllData.php</mark>
+          URL : <mark class="url">GET : http://localhost/apiUAS/api/getAllData.php</mark>
         </p>
         <h4 class="text-tertiarry"><em>Response</em></h4>
         <p class="text-success">
@@ -113,7 +113,7 @@
         <p class="mt-3">Get all data of hotwheels <mark>series</mark> cars</p>
         <h4 class="text-secondary"><em>Request</em></h4>
         <p class="mt-3">
-          URL : <mark class="url">GET : hhttp://localhost/apiUAS/getSeries.php?series=</mark>
+          URL : <mark class="url">GET : http://localhost/apiUAS/api/getSeries.php?series=</mark>
         </p>
         <h4 class="text-tertiarry"><em>Response</em></h4>
         <p class="text-success">
@@ -190,7 +190,7 @@
         <p class="mt-3">Get data of hotwheels by <mark>id</mark></p>
         <h4 class="text-secondary"><em>Request</em></h4>
         <p class="mt-3">
-          URL : <mark class="url">GET : http://localhost/apiUAS/getOneData.php?id=</mark>
+          URL : <mark class="url">GET : http://localhost/apiUAS/api/getOneData.php?id=</mark>
         </p>
         <h4 class="text-tertiarry"><em>Response</em></h4>
         <p class="text-success">
