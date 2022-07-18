@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="../assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
         <div class="container justify-content-center ">
         <div class="row">
         <div class="col-lg-5 mt-5">
-            <h1 class="mb-4"><kbd class="bg-muted">&lt;You need to login first&gt;</kbd></h1>
+            <h1 class="mb-4"><kbd class="bg-muted" style="">&lt;You need to login first&gt;</kbd></h1>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label" >Username</label>
           <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="uname">

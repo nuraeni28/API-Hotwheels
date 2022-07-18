@@ -16,14 +16,20 @@
   <link rel="stylesheet" href="assets/dracula.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <script src="scroll.js" type="module"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
 
 </head>
 
 <body class="bg-light">
 
+  <div class="scroll-tracker"></div>
+
   <nav class="navbar navbar-expand navbar-dark bg-light" aria-label="Second navbar example">
     <div class="container-fluid">
-      <a class="navbar-brand text-dark" href="#">Doc</a>
+      <a class="navbar-brand" href="#">
+        <img width="105" height="34" class="d-inline-block align-text-top" src="logo.png">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -42,13 +48,13 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 mt-5">
-        <h2 class="display-1 mb-5">Hotwheels API Documentation</h2>
+        <h2 class="display-1 mb-5 header">Hotwheels API Documentation</h2>
         <p class="text-danger">Oopps! you need to login to generate the key</p>
-        <button class="btn btn-disabled btn-sm" disabled>Generate API Key</button>
-        <h3 class="text-primary mt-5">
+        <button class="btn btn-disabled btn-sm btn-animated" disabled>Generate API Key</button>
+        <h3 class="text-primary mt-5 method">
           <small><em>Method</em></small>/GET
         </h3>
-        <p class="mt-3">Get all data of <mark>hotwheels</mark> cars</p>
+        <p class="mt-3 paragraph-animated">Get all data of <mark>hotwheels</mark> cars</p>
         <h4 class="text-secondary"><em>Request</em></h4>
         <p class="mt-3">
           URL : <mark class="url">GET : http://localhost/apiUAS/getAllData.php</mark>
@@ -61,36 +67,39 @@
           <pre>
             <code id="code" >
                 <!-- paste disini hasil response sukses -->
-      {
-        "status": {
-            "code": 200,
-            "description": "Request Valid"
-        },
-        "results": [
-            {
-                "id": "1",
-                "model_name": "1970 Pontiac Firebird",
-                "series_name": "HW Dream Garage - New for 2022",
-                "series_number": "1/5"
-            },
-    }
+              {
+                "status": {
+                    "code": 200,
+                    "description": "Request Valid"
+                },
+                "results": [
+                    {
+                        "id": "1",
+                        "model_name": "1970 Pontiac Firebird",
+                        "series_name": "HW Dream Garage - New for 2022",
+                        "series_number": "1/5"
+                    },
+                  ]
+              }
     
             </code>
           </pre>
         </div>
+
         <p class="text-danger mt-3">
           <strong>400</strong> <strong><em>Failed</em></strong>
         </p>
+
         <div class="code-wrapper">
           <pre>
             <code id="code" >
                  <!-- paste disini hasil response failed (invalid key) -->
-        {
-        "status": {
-            "code": 400,
-            "description": "API Key/Token Not Valid"
-        }
-    }
+              {
+              "status": {
+                  "code": 400,
+                  "description": "API Key/Token Not Valid"
+                }
+              }
 
             </code>
           </pre>
@@ -114,42 +123,44 @@
           <pre>
             <code id="code" >
                 <!-- paste disini hasil response sukses -->
-    {
-    "status": {
-        "code": 200,
-        "description": "Request Valid"
-    },
-    "results": [
-        {
-            "id": "3",
-            "model_name": "Twinnin' 'n Winnin'",
-            "series_name": "Baja Blazers",
-            "series_number": "1/10"
-        },
-        {
-            "id": "4",
-            "model_name": "Twinnin' 'n Winnin' (2nd Color)",
-            "series_name": "Baja Blazers",
-            "series_number": "1/10"
-        },
-      }
-    
+              {
+                "status": {
+                    "code": 200,
+                    "description": "Request Valid"
+                },
+                "results": [
+                    {
+                        "id": "3",
+                        "model_name": "Twinnin' 'n Winnin'",
+                        "series_name": "Baja Blazers",
+                        "series_number": "1/10"
+                    },
+                    {
+                        "id": "4",
+                        "model_name": "Twinnin' 'n Winnin' (2nd Color)",
+                        "series_name": "Baja Blazers",
+                        "series_number": "1/10"
+                    },
+                    ] 
+              }
+      
             </code>
           </pre>
         </div>
         <p class="text-danger mt-3">
           <strong>400</strong> <strong><em>Failed</em></strong>
         </p>
+
         <div class="code-wrapper">
           <pre>
             <code id="code" >
                  <!-- paste disini hasil response failed (invalid key) -->
-        {
-        "status": {
-            "code": 400,
-            "description": "API Key/Token Not Valid"
-        }
-    }
+            {
+            "status": {
+                "code": 400,
+                "description": "API Key/Token Not Valid"
+            }
+          }
             </code>
           </pre>
         </div>
@@ -161,12 +172,12 @@
           <pre>
             <code id="code" >
                  <!-- paste disini hasil response failed (invalid key) -->
-    {
-        "status": {
-            "code": 400,
-            "description": "None"
-        }
-    }
+            {
+                "status": {
+                    "code": 400,
+                    "description": "None"
+                }
+            }
 
             </code>
           </pre>
@@ -186,23 +197,23 @@
           <strong>200</strong> <strong><em>Success</em></strong>
         </p>
         <div class="code-wrapper">
-          <pre>
+          <pre class="code-wrapper">
             <code id="code" >
                 <!-- paste disini hasil response sukses -->
                     {
-        "status": {
-            "code": 200,
-            "description": "Request Valid"
-        },
-        "results": [
-            {
-                "id": "10",
-                "model_name": "'20 Jeep Gladiator (3rd Color)",
-                "series_name": "Baja Blazers",
-                "series_number": "4/10"
-            }
-        ]
-    }
+                          "status": {
+                              "code": 200,
+                              "description": "Request Valid"
+                          },
+                          "results": [
+                              {
+                                  "id": "10",
+                                  "model_name": "'20 Jeep Gladiator (3rd Color)",
+                                  "series_name": "Baja Blazers",
+                                  "series_number": "4/10"
+                              }
+                          ]
+                      }
     
             </code>
           </pre>
@@ -219,7 +230,7 @@
             "code": 400,
             "description": "API Key/Token Not Valid"
         }
-    }
+       }
 
             </code>
           </pre>
@@ -232,12 +243,12 @@
           <pre>
             <code id="code" >
                  <!-- paste disini hasil response failed (invalid key) -->
-    {
-        "status": {
-            "code": 400,
-            "description": "ID Not Valid"
-        }
-    }
+        {
+          "status": {
+             "code": 400,
+              "description": "ID Not Valid"
+            }
+          }
 
             </code>
           </pre>
@@ -251,6 +262,7 @@
   <script>
     hljs.initHighlightingOnLoad();
   </script>
+  <script src="reveal.js"></script>
 </body>
 
 </html>

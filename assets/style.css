@@ -1,117 +1,125 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap");
 
-
 /* width */
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #eb5e28;
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #e76f51;
-  }
-
-
-body{
-    padding-bottom: 40px;
+  width: 5px;
+  height: 5px;
 }
 
-.navbar-brand{
-    font-family: 'Space Mono', monospace;
-    font-weight: 700;
-    font-size: 24px;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #eb5e28;
+  border-radius: 10px;
 }
 
-.form-label{
-    font-family: 'Space Mono', monospace;
-    color: black !important;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e76f51;
 }
 
-.form-control{
-    border-color: #14213d;
+body {
+  padding-bottom: 40px;
 }
 
-
-pre{
-    display: inline-table;
-	padding-right: 20px;
-	margin: 0;
-	overflow: auto;
-	overflow-y: hidden;
-	font-size: 12px;
-	line-height: 20px;
-	background: #14213d;
-    border-radius: 20px;
+.navbar-brand {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 24px;
 }
 
-.uname{
-    font-family: 'Space Mono', monospace;
+.form-label {
+  font-family: "Space Mono", monospace;
+  color: black !important;
 }
 
-.text-danger{
-    font-family: 'Space Mono', monospace !important;
+.form-control {
+  border-color: #14213d;
 }
 
-
-h1, h2, h3, p{
-    color: black;
-    font-family: 'Space Mono', monospace;
+pre {
+  display: inline-table;
+  padding-right: 20px;
+  margin: 0;
+  overflow: auto;
+  overflow-y: hidden;
+  font-size: 12px;
+  line-height: 20px;
+  background: #14213d;
+  border-radius: 20px;
 }
 
-h3{
-    font-weight: 600;
+.uname {
+  font-family: "Space Mono", monospace;
 }
 
-kbd{
-    background-color: #001d3d;
-    color: #d578fd;
+.text-danger {
+  font-family: "Space Mono", monospace !important;
 }
 
-.bg-kdbcustom{
-    background-color: #ffb703;
-    color: white;
+h1,
+h2,
+h3,
+p {
+  color: black;
+  font-family: "Space Mono", monospace;
 }
 
-.btn-dark{
-    background-color: #506ff6 !important;
-    font-family: 'Space Mono', monospace;
+h3 {
+  font-weight: 600;
 }
 
-.btn-disabled{
-    background-color: #14213d !important;
-    color: white !important;
-    font-family: 'Space Mono', monospace;
+kbd {
+  background-color: #001d3d;
+  color: #d578fd;
 }
 
-.text-primary{
-    color: black !important;
+.bg-kdbcustom {
+  background-color: #ffb703;
+  color: white;
 }
 
-.text-secondary{
-    color: black !important;
+.btn-dark {
+  background-color: #506ff6 !important;
+  font-family: "Space Mono", monospace;
 }
 
-.text-tertiarry{
-    color: #caadff;
+.btn-disabled {
+  background-color: #14213d !important;
+  color: white !important;
+  font-family: "Space Mono", monospace;
 }
 
-.text-success{
-    color: #70e000 !important;
+.text-primary {
+  color: black !important;
 }
 
-mark{
-    background-color: blue;
-    color: white;
+.text-secondary {
+  color: black !important;
+}
+
+.text-tertiarry {
+  color: #caadff;
+}
+
+.text-success {
+  color: #70e000 !important;
+}
+
+mark {
+  background-color: blue;
+  color: white;
 }
 
 .url {
-    background-color: #14213d !important;
-    color: #d578fd;
+  background-color: #14213d !important;
+  color: #d578fd;
+}
+
+.scroll-tracker {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 0.3rem;
+  background-color: blue;
+  transform-origin: left;
+  border-radius: 20px;
 }

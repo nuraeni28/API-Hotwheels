@@ -40,10 +40,11 @@ if (isset($_POST['submit'])) {
   <link rel="stylesheet" href="assets/dracula.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-
+  <script src="scroll.js" type="module"></script>
 </head>
 
 <body class="bg-light">
+  <div class="scroll-tracker"></div>
 
   <nav class="navbar navbar-expand navbar-dark bg-light" aria-label="Second navbar example">
     <div class="container-fluid">
