@@ -64,7 +64,7 @@ if (isset($_POST['submit'])) {
           <div class="col-lg-12">
             <h1 class="mb-4"><kbd>&lt;Create your account&gt;</kbd></h1>
           </div>
-          <div class="mb-3">
+          <div class="mb-3"> 
             <label for="exampleInputEmail1" class="form-label">User</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="uname">
             <span class="text-danger"><?php echo @$unameError; ?></span>
