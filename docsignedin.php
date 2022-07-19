@@ -41,6 +41,7 @@ if (isset($_POST['submit'])) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
   <script src="scroll.js" type="module"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body class="bg-light">
@@ -48,8 +49,9 @@ if (isset($_POST['submit'])) {
 
   <nav class="navbar navbar-expand navbar-dark bg-light" aria-label="Second navbar example">
     <div class="container-fluid">
-      <a class="navbar-brand text-dark" href="#">Doc</a>
-      <a style="font-family: 'Space Mono', monospace;"><?php echo @$hello; ?></a>
+      <a class="navbar-brand" href="#">
+        <img width="105" height="34" class="d-inline-block align-text-top" src="logo.png">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -58,6 +60,7 @@ if (isset($_POST['submit'])) {
         <ul class="navbar-nav me-auto">
         </ul>
         <form role="search">
+          <a style="font-family: 'Space Mono', monospace; margin-right:24px"><?php echo @$hello; ?></a>
           <a type="button" href="auth/logout.php" class="btn btn-dark">Logout</a>
         </form>
       </div>
@@ -67,9 +70,9 @@ if (isset($_POST['submit'])) {
   <div class="container">
     <div class="row">
       <div class="col-lg-12 mt-5">
-        <h2 class="display-1 mb-5">Hotwheels API Documentation</h2>
+        <h2 class="display-1 mb-5 header">Hotwheels API Documentation</h2>
         <form action="" method="post">
-          <button class="btn btn-dark btn-sm" name="submit1" type='submit'>Generate API Key</button>
+          <button class="btn btn-dark btn-sm btn-animated" name="submit1" type='submit'>Generate API Key</button>
           <input type="hidden" name="uname" value="<?php echo $_SESSION['uname']; ?>">
           <input type="hidden" name="pwd" value="<?php echo $_SESSION['pwd']; ?>">
           <?php
@@ -101,10 +104,10 @@ if (isset($_POST['submit'])) {
           ?>
         </form>
         <p class="mt-3" style="font-family: 'Space Mono', monospace;"><?php echo @$generated; ?></p>
-        <h3 class="text-primary mt-5">
+        <h3 class="text-primary mt-5 method">
           <small><em>Method</em></small>/GET
         </h3>
-        <p class="mt-3">Get all data of <mark>hotwheels</mark> cars</p>
+        <p class="mt-3 paragraph-animated">Get all data of <mark>hotwheels</mark> cars</p>
         <h4 class="text-secondary"><em>Request</em></h4>
         <p class="mt-3">
           URL : <mark class="url">GET : http://localhost/apiUAS/api/getAllData.php</mark>
@@ -290,6 +293,7 @@ if (isset($_POST['submit'])) {
   <script>
     hljs.initHighlightingOnLoad();
   </script>
+  <script src="reveal.js"></script>
 </body>
 
 </html>
